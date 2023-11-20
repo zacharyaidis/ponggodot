@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccik60amxpcrt"]
+
+[ext_resource type="Texture2D" uid="uid://di1bb8augswb5" path="res://Pong Assets/Paddle.png" id="1_gmosp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enaqq"]
+size = Vector2(20, 187)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(95, 40)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.84774e-06, 83.5)
+scale = Vector2(0.4, 3.74)
+texture = ExtResource("1_gmosp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 83.5)
+shape = SubResource("RectangleShape2D_enaqq")
