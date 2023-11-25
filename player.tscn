@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccik60amxpcrt"]
+[gd_scene load_steps=4 format=3 uid="uid://ccik60amxpcrt"]
 
+[ext_resource type="Script" path="res://player.gd" id="1_1vecd"]
 [ext_resource type="Texture2D" uid="uid://di1bb8augswb5" path="res://Pong Assets/Paddle.png" id="1_gmosp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enaqq"]
@@ -7,6 +8,7 @@ size = Vector2(20, 187)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(95, 40)
+script = ExtResource("1_1vecd")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
