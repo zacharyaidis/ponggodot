@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://di1bb8augswb5" path="res://Pong Assets/Paddle.png" id="1_gmosp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enaqq"]
-size = Vector2(20, 187)
+size = Vector2(20, 101)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(95, 40)
@@ -12,10 +12,10 @@ script = ExtResource("1_1vecd")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.84774e-06, 83.5)
-scale = Vector2(0.4, 3.74)
+position = Vector2(1.84774e-06, 126.5)
+scale = Vector2(0.4, 2.02)
 texture = ExtResource("1_gmosp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 83.5)
+position = Vector2(0, 126.5)
 shape = SubResource("RectangleShape2D_enaqq")

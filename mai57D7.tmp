@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtgqvswj2fi7m"]
+
+[ext_resource type="PackedScene" uid="uid://ccik60amxpcrt" path="res://player.tscn" id="1_20l1x"]
+[ext_resource type="PackedScene" uid="uid://2cf4fd2fu4ni" path="res://opponent.tscn" id="2_sg144"]
+[ext_resource type="PackedScene" uid="uid://che3uecs57kbr" path="res://ball.tscn" id="3_wyjut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jautp"]
+size = Vector2(1162, 12)
+
+[node name="main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_20l1x")]
+position = Vector2(64, -31)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(571, -6)
+shape = SubResource("RectangleShape2D_jautp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(0, 660)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(576, -6)
+shape = SubResource("RectangleShape2D_jautp")
+
+[node name="Opponent" parent="." instance=ExtResource("2_sg144")]
+position = Vector2(1079, -31)
+
+[node name="Ball" parent="." instance=ExtResource("3_wyjut")]
+position = Vector2(571, 289)
+scale = Vector2(0.5, 0.5)
