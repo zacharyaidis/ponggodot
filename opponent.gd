@@ -11,7 +11,7 @@ func _physics_process(delta):
 	move_and_collide(Vector2(0, get_opponent_direction()) * speed)
 	
 func get_opponent_direction():
-	if abs(ball.position.y - position.y) > 1.5:
+	if abs(ball.position.y - position.y) > 3:
 		if ball.position.y > position.y: 
 			return 1
 		else: 

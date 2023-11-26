@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 150
+@export var speed = 400
 
 # Equivalent to Vector2(0,0)
 var direction = Vector2.ZERO
@@ -24,3 +24,10 @@ func _physics_process(delta):
 		# A normal is the direction a specific surface is facing, we use the normal to bounce in the correct direction, use bounce method
 		direction = direction.bounce(collision_object.get_normal())
 	
+func stop_ball():
+	speed = 0
+
+func restart_ball():
+	speed = 400
+	direction.x = [-1,1].pick_random()
+	direction.y = [-1,1].pick_random()
